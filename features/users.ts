@@ -36,7 +36,6 @@ export const usersSlice = createSlice({
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
         state.loading = 'idle';
-        console.info(action);
         state.data.push(action.payload);
       });
   },
